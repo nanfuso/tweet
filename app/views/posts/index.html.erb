@@ -1,0 +1,17 @@
+<h1>Create a Gobble!</h1>
+<%= form_tag '/posts', method: :post do %>
+
+    <div class="form-group">
+        <%= text_field_tag :text, 'Gobble Gobble', size: '24x6'%>
+    </div>
+    <%= hidden_field_tag :user_id %>
+
+    <%= submit_tag 'Create Gobble' %>
+<% end %>
+
+<% if @posts.length != 0 %>
+    <% @posts.each do |post| %>
+        <%= post.user.user_name %>
+        <%= post.text %>
+    <% end %>
+<% end %>
