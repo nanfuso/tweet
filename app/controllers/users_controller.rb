@@ -15,7 +15,6 @@ class UsersController < ApplicationController
             flash[:success] = "Congrats on your new account!"
             redirect_to '/'
         else
-            flash[:warning] = "Something went wrong. Try again"
             redirect_to '/signup'
         end
     end

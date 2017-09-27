@@ -13,7 +13,6 @@ class PostsController < ApplicationController
             flash[:success] = "Gobble Gobble"
             redirect_to '/'
         else
-            flash[:warning] = "Uh oh, something went wrong"
             redirect_to '/'
         end
     end
@@ -33,7 +32,6 @@ class PostsController < ApplicationController
             flash[:success] = "Gobble Updated"
             redirect_to '/'
         else
-            flash[:warning] = "Uh Oh, something went wrong"
             render 'edit.html.erb'
         end
     end

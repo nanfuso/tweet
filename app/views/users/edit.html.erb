@@ -1,3 +1,10 @@
+<% @user.errors.full_messages.each do |error| %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= error %>
+</div>
+<% end %>
+
 <%= form_tag "/users/#{current_user.id}", method: :patch do %>
 
     <div class="form-group">
