@@ -1,0 +1,10 @@
+<h1>Gobble got a grammar gaffe?</h1>
+
+<%= form_tag "/posts/#{@post.id}", method: :patch do %>
+    
+    <%= label_tag :text %>
+    <%= text_field_tag :text, @post.text %>
+
+    <%= submit_tag "Update Your Gobble" %>
+
+<% end %>
