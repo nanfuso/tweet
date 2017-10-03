@@ -1,5 +1,3 @@
-
-
 <div class="col-xs-12 col-sm-4 wrapper-1">
     <h1>Create a Gobble!</h1>
     <%= form_tag '/posts', method: :post do %>
@@ -14,10 +12,11 @@
 </div>
 
 <div class="col-xs-12 col-sm-8 wrapper-1">
-    <% if @posts.length != 0 %>
-        <% @posts.each do |post| %>
+<h1><%= @user.user_name %>'s Gobbles</h1>
+    <% if @user_posts.length != 0 %>
+        <% @user_posts.each do |post| %>
         <div class="well">
-            <b><a href="/users/<%= post.user.id %>"><%= post.user.user_name %></b></a>
+            <b><%= post.user.user_name %></b>
             <br>
             <%= post.text %>
             <div><h6><%= post.created_at.strftime('%b %e, %l:%M %p') %></h6></div>

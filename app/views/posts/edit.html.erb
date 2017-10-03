@@ -4,14 +4,14 @@
     <%= error %>
 </div>
 <% end %>
-
-<h1>Gobble got a grammar gaffe?</h1>
-
-<%= form_tag "/posts/#{@post.id}", method: :patch do %>
-    
-    <%= label_tag :text %>
-    <%= text_field_tag :text, @post.text %>
-
-    <%= submit_tag "Update Your Gobble" %>
-
-<% end %>
+<div class="col-xs-12 col-sm-2 wrapper-1"></div>
+<div class="col-xs-12 col-sm-8 wrapper-1">
+    <h1>Gobble got a grammar gaffe?</h1>
+    <div class="well">
+    <%= form_tag "/posts/#{@post.id}", method: :patch do %>
+        <%= text_field_tag :text, @post.text %>
+    </div>
+        <%= submit_tag "Update Your Gobble" %>
+    <% end %>
+</div>
+<div class="col-xs-12 col-sm-2 wrapper-1"></div>

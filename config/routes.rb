@@ -4,13 +4,14 @@ Rails.application.routes.draw do
 # users routes
  get '/signup' => 'users#new'
  post '/users' => 'users#create'
+ get '/users/:id' => 'users#show'
  get '/users/:id/edit' => 'users#edit'
  patch '/users/:id' => 'users#update'
 
  # sessions routes
  get '/login' => 'sessions#new'
  post '/login' => 'sessions#create'
- delete '/logout' => 'sessions#destroy'
+ get '/logout' => 'sessions#destroy'
 
 # posts routes
 get '/' => 'posts#index'
